@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRIX CONNECT · APIs para adquirentes e checkout transparente sob medida</title>
+
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Plataforma de APIs que conecta sua operação a todos os adquirentes e subadquirentes com roteamento inteligente e checkouts transparentes sob medida.">
+    <meta name="keywords" content="API pagamentos, adquirentes, subadquirentes, checkout transparente, roteamento inteligente">
+    <meta property="og:title" content="DRIX CONNECT · Infraestrutura de Pagamentos via API">
+    <meta property="og:description" content="Orquestre adquirentes, crie checkouts sob medida e monitore tudo em tempo real com uma única camada de API.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://drixpay.com.br">
+    <meta property="og:image" content="images/img1.png">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/privacy-popup.css">
+    <link rel="stylesheet" href="css/terms-popup.css">
+
+    <!-- Bibliotecas de terceiros -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#plataforma" class="logo">
+                <img src="images/logo.svg" alt="DRIX CONNECT" height="40">
+                <span class="logo-badge">CONNECT</span>
+            </a>
+            <nav class="nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#plataforma">Plataforma</a></li>
+                    <li><a href="#api">API &amp; Stack</a></li>
+                    <li><a href="#checkout">Checkout sob medida</a></li>
+                    <li><a href="#cases">Playbook</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <button class="cta-button ghost" onclick="openContactForm()">Falar com o time</button>
+                <button class="menu-toggle" aria-label="Abrir menu mobile">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+            <ul>
+                <li><a href="#plataforma">Plataforma</a></li>
+                <li><a href="#api">API &amp; Stack</a></li>
+                <li><a href="#checkout">Checkout sob medida</a></li>
+                <li><a href="#cases">Playbook</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><button class="cta-button-primary mobile" onclick="openContactForm()">Agendar demonstração</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="plataforma">
+        <div class="container hero-grid">
+            <div class="hero-content" data-aos="fade-up">
+                <span class="hero-badge">Nova geração · DRIX CONNECT</span>
+                <h1>Conecte sua empresa a todos os adquirentes com uma única API</h1>
+                <p>
+                    Orquestramos adquirentes e subadquirentes, aplicamos roteamento inteligente com multi-MDR,
+                    e desenhamos checkouts transparentes sob medida para cada operação.
+                </p>
+                <div class="hero-cta">
+                    <button class="cta-button-primary" onclick="openContactForm()">Agendar demonstração</button>
+                    <a class="cta-link" href="#api">Ver arquitetura</a>
+                </div>
+                <div class="hero-highlights">
+                    <div class="highlight-card">
+                        <p class="label">Switch distribuído</p>
+                        <h3>18+ conectores</h3>
+                        <p>Plugins prontos para Cielo, Rede, Getnet, Stone, Adyen, Fiserv, Vindi e mais.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <p class="label">Checkout sob medida</p>
+                        <h3>Time dedicado</h3>
+                        <p>UX customizado, antifraude embarcado e métodos locais em um único SDK.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <p class="label">Observabilidade</p>
+                        <h3>99,98% uptime</h3>
+                        <p>Monitoramento em tempo real e alertas proativos para cada rota de pagamento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="data-card">
+                    <p>Roteamento ativo</p>
+                    <h4>Stone → Adyen → Rede</h4>
+                    <span class="status-chip success">Sem latência</span>
+                </div>
+                <div class="mesh"></div>
+                <div class="data-card alt">
+                    <p>Checkout transparente</p>
+                    <h4>+32% conversão</h4>
+                    <span class="status-chip">Experiência personalizada</span>
+                </div>
+                <img src="images/img1.png" alt="Dashboard de pagamentos" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="partners" aria-label="Adquirentes suportados">
+        <div class="container">
+            <p class="eyebrow">Integramos com os principais players</p>
+            <div class="partners-marquee">
+                <span>Cielo</span>
+                <span>Rede</span>
+                <span>Stone</span>
+                <span>Getnet</span>
+                <span>Adyen</span>
+                <span>PagSeguro</span>
+                <span>Vindi</span>
+                <span>Ebanx</span>
+                <span>Fiserv</span>
+                <span>Mercado Pago</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision / API Layer -->
+    <section class="vision" id="api">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="eyebrow">Camada unificada</p>
+                <h2>Uma única API para negociar adquirentes, roteamento, conciliação e antifraude</h2>
+                <p>Governamos toda a jornada com versionamento, feature flags e observabilidade granular.</p>
+            </div>
+            <div class="vision-grid">
+                <article class="vision-card" data-aos="fade-up">
+                    <h3>Orquestração inteligente</h3>
+                    <p>Configuração de regras por BIN, bandeira, ticket médio e risco em tempo real, sem alterar seu código.</p>
+                </article>
+                <article class="vision-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>SDK modular</h3>
+                    <p>Bibliotecas JS e mobile com PCI scope controlado e suporte a tokenização proprietária.</p>
+                </article>
+                <article class="vision-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Data Lake financeiro</h3>
+                    <p>Normalizamos eventos de cada adquirente, entregando conciliação automática e APIs de ledger.</p>
+                </article>
+            </div>
+            <div class="code-panel" data-aos="fade-up">
+                <div class="code-header">
+                    <span>POST /v2/payments/authorize</span>
+                    <span class="code-chip">Latência média 280ms</span>
+                </div>
+                <pre>
+{
+  "amount": 25900,
+  "currency": "BRL",
+  "merchantId": "acme-labs",
+  "routing": {
+    "strategy": "smart",
+    "fallback": ["adyen", "rede"]
+  },
+  "checkoutProfile": "checkout-sob-medida"
+}
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="metrics">
+        <div class="container metrics-grid">
+            <div class="metric-card" data-aos="fade-up">
+                <p class="label">Integrações</p>
+                <h3>+18</h3>
+                <p>Conectores homologados com SLAs ativos.</p>
+            </div>
+            <div class="metric-card" data-aos="fade-up" data-aos-delay="100">
+                <p class="label">Conversão média</p>
+                <h3>+27%</h3>
+                <p>Após adotar checkout transparente sob medida.</p>
+            </div>
+            <div class="metric-card" data-aos="fade-up" data-aos-delay="200">
+                <p class="label">Tempo de onboarding</p>
+                <h3>10 dias</h3>
+                <p>Para ligar novos adquirentes via playbooks DRIX.</p>
+            </div>
+            <div class="metric-card" data-aos="fade-up" data-aos-delay="300">
+                <p class="label">Disponibilidade</p>
+                <h3>99,98%</h3>
+                <p>Monitoramos cada rota com SLO público.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout" id="checkout">
+        <div class="container checkout-grid">
+            <div class="checkout-content" data-aos="fade-right">
+                <p class="eyebrow">Checkout transparente sob medida</p>
+                <h2>Experiência personalizada, PCI-safe e com otimização contínua</h2>
+                <ul class="checkout-list">
+                    <li>Componentes white-label com biometria passiva e 3DS flexível.</li>
+                    <li>Métodos locais (Pix, boleto, carteira) plugados ao mesmo fluxo.</li>
+                    <li>Testes A/B assistidos por nosso time de Product Design.</li>
+                    <li>Integração direta com seu CRM e antifraude favorito.</li>
+                </ul>
+                <div class="checkout-cta">
+                    <button class="cta-button-primary" onclick="openContactForm()">Projetar meu checkout</button>
+                    <span class="cta-note">Temos squads dedicadas para escalar operações enterprise.</span>
+                </div>
+            </div>
+            <div class="checkout-panel" data-aos="fade-left">
+                <div class="checkout-card">
+                    <p>Layout em produção</p>
+                    <h3>Cluster Retail</h3>
+                    <ul>
+                        <li>Pix + cartão + carteira na mesma view</li>
+                        <li>Fallback automático 3DS / frictionless</li>
+                        <li>Tokenização recorrente multi-adquirente</li>
+                    </ul>
+                </div>
+                <div class="checkout-card alt">
+                    <p>Experimentos ativos</p>
+                    <h3>+12 variações</h3>
+                    <span class="status-chip success">Em execução</span>
+                    <p>Medimos conversão com heatmaps e telemetria própria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Observability -->
+    <section class="observability">
+        <div class="container observability-grid">
+            <div class="observability-card" data-aos="fade-up">
+                <p class="eyebrow">Data &amp; Alertas</p>
+                <h2>Telemetry-first</h2>
+                <p>Alertas opinativos via Slack, PagerDuty e Webhooks dedicados.</p>
+                <div class="chips">
+                    <span class="chip">Grafana</span>
+                    <span class="chip">Looker</span>
+                    <span class="chip">BigQuery</span>
+                </div>
+            </div>
+            <div class="observability-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>Playbooks</h3>
+                <ul>
+                    <li>Fallback automático por degradê de autorização.</li>
+                    <li>Detector de anomalias baseado em machine learning.</li>
+                    <li>Reprocessamento guiado e conciliação com ERP.</li>
+                </ul>
+            </div>
+            <div class="observability-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Compliance</h3>
+                <ul>
+                    <li>PCI DSS nível 1.</li>
+                    <li>Token vault dedicado e HSM virtual.</li>
+                    <li>LGPD-by-design com segregação por tenant.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow -->
+    <section class="workflow" id="cases">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="eyebrow">Playbook de implementação</p>
+                <h2>Do discovery ao go-live em semanas, não em meses</h2>
+            </div>
+            <div class="workflow-steps">
+                <div class="workflow-step" data-aos="fade-up">
+                    <span class="step-index">01</span>
+                    <h3>Discovery técnico</h3>
+                    <p>Mapeamos adquirentes atuais, SLAs e gaps de UX.</p>
+                </div>
+                <div class="workflow-step" data-aos="fade-up" data-aos-delay="100">
+                    <span class="step-index">02</span>
+                    <h3>Blueprint da API</h3>
+                    <p>Desenhamos contratos, regras de roteamento e migração.</p>
+                </div>
+                <div class="workflow-step" data-aos="fade-up" data-aos-delay="200">
+                    <span class="step-index">03</span>
+                    <h3>Checkout Lab</h3>
+                    <p>Squad dedicada cria componentes sob medida.</p>
+                </div>
+                <div class="workflow-step" data-aos="fade-up" data-aos-delay="300">
+                    <span class="step-index">04</span>
+                    <h3>Go-live assistido</h3>
+                    <p>Monitoramos 24/7 e ajustamos em tempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <p class="eyebrow">Perguntas frequentes</p>
+                <h2>Transparência total sobre como operamos</h2>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Vocês substituem meu gateway atual?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não somos um gateway tradicional. Atuamos como camada de orquestração por cima dos adquirentes e subadquirentes que você já usa, adicionando inteligência, observabilidade e checkout sob medida.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Qual o prazo médio para integrar a API?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nosso onboarding padrão leva entre 10 e 15 dias, incluindo discovery, configuração de rotas e entrega do checkout personalizado.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Vocês criam checkouts para qualquer segmento?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Atendemos operações enterprise e scale-ups em varejo, fintech, educação, infoprodutos e economia da recorrência. Cada checkout nasce de um squad dedicado.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>Como funciona o suporte após o go-live?</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Disponibilizamos NOC 24/7, alertas proativos, gerente técnico dedicado e roadmap conjunto para evolução da API.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contato">
+        <div class="container cta-grid" data-aos="fade-up">
+            <div>
+                <p class="eyebrow">Vamos construir juntos</p>
+                <h2>Conte para a DRIX CONNECT qual checkout e quais adquirentes você precisa</h2>
+                <p>Desenhamos uma prova de conceito com dados reais em até 10 dias.</p>
+            </div>
+            <button class="cta-button-primary" onclick="openContactForm()">Solicitar contato</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <img src="images/logo2.svg" alt="DRIX CONNECT" height="40">
+                    <p>CNPJ: 58.436.909/0001-77</p>
+                    <p>AVENIDA PAULISTA, 1106</p>
+                    <p>BELA VISTA - SÃO PAULO/SP</p>
+                    <p>CEP: 01310-914</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="#" onclick="openPrivacyPolicy(); return false;">Política de Privacidade</a></li>
+                        <li><a href="#" onclick="openTermsOfUse(); return false;">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>Email: sac@drixpay.com.br</p>
+                    <p>Tel: (11) 4002-8922</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DRIX CONNECT. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Contato -->
+    <div id="contactModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeContactForm()" aria-label="Fechar">&times;</span>
+            <h2 id="contactTitle">Construa sua camada de pagamentos</h2>
+            <p class="modal-subtitle">Preencha o formulário e respondemos em até 48h com um blueprint customizado.</p>
+            <form id="contactForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="business-stage">Estágio do Negócio</label>
+                        <select id="business-stage" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="starting">Go-live em até 3 meses</option>
+                            <option value="scale">Scale-up com alto volume</option>
+                            <option value="enterprise">Enterprise com múltiplos adquirentes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email corporativo</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group full">
+                        <label for="document">CNPJ</label>
+                        <input type="text" id="document" required>
+                    </div>
+                    <div class="form-group full">
+                        <label for="about">Contexto da operação</label>
+                        <textarea id="about" rows="4" placeholder="Descreva adquirentes atuais, volume mensal, dores do checkout"></textarea>
+                    </div>
+                    <div class="form-group full">
+                        <label for="social">Site / LinkedIn</label>
+                        <input type="text" id="social">
+                    </div>
+                </div>
+                <button type="submit" class="submit-button">Solicitar blueprint</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Popup -->
+    <div id="privacyPopup" class="privacy-popup">
+        <div class="privacy-content">
+            <button class="close-privacy" onclick="closePrivacyPolicy()">×</button>
+            <h2>Política de Privacidade</h2>
+
+            <p>Na DRIX CONNECT, a privacidade dos nossos visitantes é de extrema importância.</p>
+
+            <h3>Compromisso com a Privacidade</h3>
+            <p>Valorizamos a sua privacidade e garantimos que seus dados pessoais não serão vendidos, distribuídos ou compartilhados com terceiros, exceto quando necessário para cumprir ordens judiciais.</p>
+            <p>Toda informação pessoal referente a membros, assinantes, clientes ou visitantes será tratada conforme a LGPD.</p>
+
+            <h3>Segurança dos Dados</h3>
+            <p>Dados relacionados a pagamentos não são armazenados em nossos servidores. As senhas são criptografadas e armazenadas de forma segura.</p>
+            <p>Informações enviadas em formulários são usadas exclusivamente pela nossa equipe para fornecer assistência.</p>
+
+            <h3>Registros</h3>
+            <p>Coletamos dados como IP, ISP, navegador, horário da visita e páginas acessadas para garantir segurança.</p>
+
+            <h3>Cookies e Tecnologias Semelhantes</h3>
+            <p>Empregamos cookies para armazenar preferências e oferecer experiência personalizada. Você pode desativá-los em seu navegador, mas isso pode afetar funcionalidades.</p>
+
+            <h3>Links para Sites de Terceiros</h3>
+            <p>Nosso site pode conter links externos. Recomendamos ler as políticas de privacidade dos sites visitados.</p>
+
+            <h3>Contato</h3>
+            <p>DRIX PRODUTOS E SERVIÇOS DIGITAIS LTDA · CNPJ 58.436.909/0001-77 · Avenida Paulista, 1106 - Sala 01 · Bela Vista - São Paulo/SP · CEP 01310-914 · sac@drixpay.com.br · (11) 4002-8922</p>
+        </div>
+    </div>
+
+    <!-- Terms of Use Popup -->
+    <div id="termsPopup" class="terms-popup">
+        <div class="terms-content">
+            <button class="close-terms" onclick="closeTermsOfUse()">×</button>
+            <h2>Termos de Uso</h2>
+
+            <p>Este documento estabelece os Termos de Uso entre o ESTABELECIMENTO e a DRIX PRODUTOS E SERVIÇOS DIGITAIS LTDA ("DRIX CONNECT"), CNPJ 58.436.909/0001-77, com sede na Avenida Paulista, 1106 - Sala 01, Bela Vista - São Paulo/SP.</p>
+
+            <h3>1. Objeto e Serviços</h3>
+            <p>Disponibilizamos APIs e serviços de checkout sob medida para processamento, roteamento e conciliação de transações eletrônicas.</p>
+
+            <h3>2. Cadastro e Credenciamento</h3>
+            <ul>
+                <li>Fornecer informações precisas e atualizadas.</li>
+                <li>Manter dados cadastrais atualizados.</li>
+                <li>Responder por todas as atividades realizadas com suas credenciais.</li>
+            </ul>
+
+            <h3>3. Responsabilidades do Estabelecimento</h3>
+            <ul>
+                <li>Cumprir legislação aplicável.</li>
+                <li>Manter a segurança das credenciais.</li>
+                <li>Garantir entrega dos produtos/serviços aos clientes.</li>
+            </ul>
+
+            <h3>4. Transações e Pagamentos</h3>
+            <ul>
+                <li>Transações em moeda nacional (Real).</li>
+                <li>Recursos mantidos em conta específica até liquidação.</li>
+                <li>Aplicação de taxas conforme contrato.</li>
+            </ul>
+
+            <h3>5. Segurança e Privacidade</h3>
+            <p>Seguimos PCI DSS, LGPD e políticas internas rígidas.</p>
+
+            <h3>6. Propriedade Intelectual</h3>
+            <p>Todo o conteúdo e software são de propriedade da DRIX CONNECT ou licenciados.</p>
+
+            <h3>7. Modificações e Cancelamento</h3>
+            <p>Podemos alterar estes termos mediante aviso e suspender serviços em caso de violação.</p>
+
+            <h3>8. Foro</h3>
+            <p>Fica eleito o foro de São Paulo/SP para quaisquer disputas.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/privacy-popup.js"></script>
+    <script src="js/terms-popup.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>
