@@ -15,3 +15,7 @@
 4 - Configuração de domínio
 - Arquivo: CNAME
 - Descrição: Arquivo de configuração para GitHub Pages apontando para o domínio personalizado drixpayment.com.
+
+5 - Configuração Jekyll
+- Arquivo: .nojekyll
+- Descrição: Arquivo vazio que instrui o GitHub Pages a não processar o site com Jekyll, servindo os arquivos estáticos diretamente.
