@@ -11,3 +11,7 @@
 3 - Interações e acessibilidade
 - Arquivo: js/main.js
 - Descrição: Controle do menu mobile, modal com foco e tecla ESC, acordeão de FAQ e animações das métricas adaptadas ao novo conteúdo.
+
+4 - Configuração de domínio
+- Arquivo: CNAME
+- Descrição: Arquivo de configuração para GitHub Pages apontando para o domínio personalizado drixpayment.com.
